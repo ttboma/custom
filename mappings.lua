@@ -299,6 +299,22 @@ M.md_link = {
     ['<bs>'] = { '<cmd> edit # <cr>', { silent = true } },
   }
 }
+M.git = {
+  n = {
+    ['<leader>gs'] = {
+      '<cmd> Git <cr>',
+      'Git fugitive', { silent = true },
+    },
+    ['<leader>gB'] = {
+      '<cmd> GitBlameToggle <cr>',
+      'Git blame toggle', { silent = true },
+    },
+    ['<leader>gd'] = {
+      '<cmd> Gdiffsplit <cr>',
+      'Git diff split', { silent = true },
+    },
+  },
+}
 M.disabled = {
   t = {
     -- nvterm

@@ -81,6 +81,7 @@ local plugins = {
 	},
   ['jghauser/follow-md-links.nvim'] = {},
 	['mzlogin/vim-markdown-toc'] = {},
+  ['f-person/git-blame.nvim'] = {},
 
   -- code formatting, linting etc
   ["jose-elias-alvarez/null-ls.nvim"] = {
