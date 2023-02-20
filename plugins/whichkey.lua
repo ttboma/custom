@@ -19,3 +19,6 @@ wk.register({
 wk.register({
   ["<leader>d"] = { name = "+Diagonis" },
 })
+wk.register({
+  ["<leader>v"] = { name = "+Vista" },
+})
