@@ -9,3 +9,13 @@ wk.register({
 wk.register({
   ["<leader>w"] = { name = "+Wiki" },
 })
+wk.register({
+  ["<leader>f"] = { name = "+Telescope" },
+  ["<leader>fg"] = { name = "+Git" },
+})
+wk.register({
+  ["<leader>k"] = { name = "+Key" },
+})
+wk.register({
+  ["<leader>d"] = { name = "+Diagonis" },
+})

@@ -113,11 +113,11 @@ M.nvimtree = {
         { key = "C", action = "collapse_all" },
         { key = "E", action = "expand_all" },
         ---
-        { key = "<C-v>", action = "vsplit" },
-        { key = "<C-x>", action = "split" },
-        { key = "<C-t>", action = "tabnew" },
-        { key = "<C-e>", action = "edit_in_place" },
-        { key = "<C-o>", action = "edit_no_picker" },
+        { key = "<A-v>", action = "vsplit" },
+        { key = "<A-x>", action = "split" },
+        { key = "<A-t>", action = "tabnew" },
+        { key = "<A-e>", action = "edit_in_place" },
+        { key = "<A-o>", action = "edit_no_picker" },
         { key = "<Tab>", action = "preview" },
         ---
         { key = "a", action = "create" },
