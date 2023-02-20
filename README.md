@@ -1,13 +1,6 @@
 # MY NvChad Custom
 
-This is my [NvChad](https://nvchad.com) customization based on
-[Minimal custom config](https://github.com/NvChad/example_config).
-
-- Add Plugin [project.nvim](https://github.com/ahmedkhalf/project.nvim)
-- Configure nvtree
-- Change leader to ","
-- Add options
-- Add Whichkey and Mappings
-- LSP
-  - TODO: LSP for markdown??
-
+This is my [NvChad](https://nvchad.com) customization based on [Minimal custom config](https://github.com/NvChad/example_config).
+Please follow the instrucitons to setup NvChad and git clone this repository
+under ./config/nvim/lua. Use my leader key which is ",". And the [which-key](https://github.com/folke/which-key.nvim)
+panel will show all the mappings.
