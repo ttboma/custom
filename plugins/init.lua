@@ -121,6 +121,16 @@ local plugins = {
     end,
   },
 
+  ["giusgad/pets.nvim"] = {
+    requires = {
+      "edluffy/hologram.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require("pets").setup()
+    end,
+  }
+
   -- Debugging
   -- ['mfussenegger/nvim-dap'] = {},
 
