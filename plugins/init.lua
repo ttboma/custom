@@ -50,9 +50,11 @@ local plugins = {
 	["kevinhwang91/rnvimr"] = {
 		cmd = "RnvimrToggle",
 	},
-	['liuchengxu/vista.vim'] = {},
-  ["folke/trouble.nvim"] = {
-		cmd = "TroubleToggle",
+
+  -- git
+  ['f-person/git-blame.nvim'] = {},
+	["sindrets/diffview.nvim"] = {
+		event = "BufRead",
 	},
 	["tpope/vim-fugitive"] = {
 		cmd = {
@@ -72,22 +74,50 @@ local plugins = {
 		},
 		ft = { "fugitive" },
 	},
-	["sindrets/diffview.nvim"] = {
-		event = "BufRead",
+
+  -- code 
+  ["jose-elias-alvarez/null-ls.nvim"] = { -- formatting, linting etc
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.null-ls"
+    end,
+  },
+	['liuchengxu/vista.vim'] = {},
+  ["folke/trouble.nvim"] = {
+		cmd = "TroubleToggle",
 	},
+  ['RRethy/vim-illuminate'] = {},
+  ['mrjones2014/nvim-ts-rainbow'] = {
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        highlight = {
+          -- ...
+        },
+        -- ...
+        rainbow = {
+          enable = true,
+          -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+          extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+          max_file_lines = nil, -- Do not enable for files with more than n lines, int
+          -- colors = {}, -- table of hex strings
+          -- termcolors = {} -- table of colour name strings
+        },
+      })
+    end,
+  },
+
+  -- Markdown
 	["iamcco/markdown-preview.nvim"] = {
 		run = "cd app && npm install",
 		ft = "markdown",
 	},
   ['jghauser/follow-md-links.nvim'] = {},
 	['mzlogin/vim-markdown-toc'] = {},
-  ['f-person/git-blame.nvim'] = {},
 
-  -- code formatting, linting etc
-  ["jose-elias-alvarez/null-ls.nvim"] = {
-    after = "nvim-lspconfig",
+  ['folke/todo-comments.nvim'] = {
+    requires = "nvim-lua/plenary.nvim",
     config = function()
-      require "custom.plugins.null-ls"
+      require("todo-comments").setup {}
     end,
   },
 
