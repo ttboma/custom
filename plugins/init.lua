@@ -75,7 +75,7 @@ local plugins = {
 		ft = { "fugitive" },
 	},
 
-  -- code 
+  -- coding experience
   ["jose-elias-alvarez/null-ls.nvim"] = { -- formatting, linting etc
     after = "nvim-lspconfig",
     config = function()
@@ -105,6 +105,24 @@ local plugins = {
       })
     end,
   },
+  ['folke/todo-comments.nvim'] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {}
+    end,
+  },
+  ["utilyre/barbecue.nvim"] = {
+    tag = "*",
+    requires = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    after = "nvim-web-devicons", -- keep this if you're using NvChad
+    config = function()
+      local M = require"custom.plugins.barbecue"
+      require("barbecue").setup(M)
+    end,
+  },
 
   -- Markdown
 	["iamcco/markdown-preview.nvim"] = {
@@ -113,23 +131,6 @@ local plugins = {
 	},
   ['jghauser/follow-md-links.nvim'] = {},
 	['mzlogin/vim-markdown-toc'] = {},
-
-  ['folke/todo-comments.nvim'] = {
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup {}
-    end,
-  },
-
-  ["giusgad/pets.nvim"] = {
-    requires = {
-      "edluffy/hologram.nvim",
-      "MunifTanjim/nui.nvim",
-    },
-    config = function()
-      require("pets").setup()
-    end,
-  }
 
   -- Debugging
   -- ['mfussenegger/nvim-dap'] = {},
