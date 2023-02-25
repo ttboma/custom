@@ -105,8 +105,8 @@ local M = {
   ---
   ---@type barbecue.Config.kinds
   kinds = {
-    File = "",
-    Module = "",
+    File = "",
+    Module = "",
     Namespace = "",
     Package = "",
     Class = "",
@@ -123,7 +123,7 @@ local M = {
     Number = "",
     Boolean = "",
     Array = "",
-    Object = "",
+    Object = "",
     Key = "",
     Null = "",
     EnumMember = "",

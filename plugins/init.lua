@@ -123,6 +123,12 @@ local plugins = {
       require("barbecue").setup(M)
     end,
   },
+  ["chentoast/marks.nvim"] = {
+    config = function()
+      local M = require"custom.plugins.marks"
+      require"marks".setup(M)
+    end,
+  },
 
   -- Markdown
 	["iamcco/markdown-preview.nvim"] = {
