@@ -66,6 +66,9 @@ vim.g.mkdp_auto_start = 0
 -- git-blame
 vim.g.gitblame_enabled = 0
 
+-- notify
+vim.notify = require("notify")
+
 local autocmd = vim.api.nvim_create_autocmd
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {

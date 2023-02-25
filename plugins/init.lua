@@ -138,6 +138,19 @@ local plugins = {
   ['jghauser/follow-md-links.nvim'] = {},
 	['mzlogin/vim-markdown-toc'] = {},
 
+  ["rcarriga/nvim-notify"] = {
+    config = function()
+      require"notify".setup{}
+    end,
+  },
+
+  ['ggandor/leap.nvim'] = {
+    requires = "tpope/vim-repeat",
+    config = function()
+      require('leap').add_default_mappings()
+    end,
+  },
+
   -- Debugging
   -- ['mfussenegger/nvim-dap'] = {},
 
