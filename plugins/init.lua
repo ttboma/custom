@@ -12,6 +12,13 @@ local plugins = {
       require "custom.plugins.whichkey"
     end,
   },
+  ["nvim-telescope/telescope.nvim"] = {
+    disable = false,
+    override_options = function()
+      require('telescope').load_extension('projects')
+      require'telescope'.extensions.projects.projects{}
+    end,
+  },
 
   -- Override plugin definition options
   ["neovim/nvim-lspconfig"] = {

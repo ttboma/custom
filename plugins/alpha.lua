@@ -71,6 +71,7 @@ M = {
     val = {
       button(", f f", "  Find File  ", ":Telescope find_files<CR>"),
       button(", f o", "  Recent File  ", ":Telescope oldfiles<CR>"),
+      button(", f p", "  Recent Project  ", ":Telescope projects<CR>"),
       button(", f w", "  Find Word  ", ":Telescope live_grep<CR>"),
       button(", b m", "  Bookmarks  ", ":Telescope marks<CR>"),
       button(", t h", "  Themes  ", ":Telescope themes<CR>"),
