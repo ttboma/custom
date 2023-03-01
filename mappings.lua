@@ -14,6 +14,8 @@ M.general = {
     -- remember u can "<leader>x" to delete and close buffer (mapping of tabuline)
     ["<leader>q"] = { "<cmd> q <CR>", "Close window", opts = { nowait = true } },
 
+    ["<leader>s"] = { "<cmd> w <CR>", "Save file", opts = { nowait = true } },
+
     ["L"] = { "g_", opts = { nowait = true } },
     ["H"] = { "_", opts = { nowait = true } },
     ["J"] = { "<C-d>", opts = { nowait = true } },
@@ -309,9 +311,13 @@ M.git = {
       '<cmd> GitBlameToggle <cr>',
       'Git blame toggle', { silent = true },
     },
-    ['<leader>gd'] = {
-      '<cmd> Gdiffsplit <cr>',
-      'Git diff split', { silent = true },
+    ['<leader>gf'] = {
+      '<cmd> DiffviewFileHistory <cr>',
+      'DiffviewFileHistory', { silent = true },
+    },
+    ['<leader>go'] = {
+      '<cmd> DiffviewOpen <cr>',
+      'DiffviewOpen', { silent = true },
     },
   },
 }
