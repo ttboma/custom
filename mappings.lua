@@ -307,17 +307,21 @@ M.git = {
       '<cmd> Git <cr>',
       'Git fugitive', { silent = true },
     },
-    ['<leader>gB'] = {
-      '<cmd> GitBlameToggle <cr>',
-      'Git blame toggle', { silent = true },
-    },
-    ['<leader>gf'] = {
+    ['<leader>gD'] = {
       '<cmd> DiffviewFileHistory <cr>',
-      'DiffviewFileHistory', { silent = true },
+      'Diffview current branch', { silent = true },
+    },
+    ['<leader>gd'] = {
+      '<cmd> DiffviewFileHistory % <cr>',
+      'Diffview current file', { silent = true },
     },
     ['<leader>go'] = {
       '<cmd> DiffviewOpen <cr>',
       'DiffviewOpen', { silent = true },
+    },
+    ['<leader>gB'] = {
+      '<cmd> Gitsigns toggle_current_line_blame <cr>',
+      'Git blame toggle', { silent = true },
     },
   },
 }

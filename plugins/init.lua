@@ -59,10 +59,7 @@ local plugins = {
 	},
 
   -- git
-  ['f-person/git-blame.nvim'] = {},
-	["sindrets/diffview.nvim"] = {
-		event = "BufRead",
-	},
+  -- ['f-person/git-blame.nvim'] = {},
 	["tpope/vim-fugitive"] = {
 		cmd = {
 			"G",
@@ -80,6 +77,9 @@ local plugins = {
 			"Gedit"
 		},
 		ft = { "fugitive" },
+	},
+	["sindrets/diffview.nvim"] = {
+		event = "BufRead",
 	},
 
   -- coding experience
