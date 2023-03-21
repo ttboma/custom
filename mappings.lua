@@ -303,7 +303,7 @@ M.md_link = {
 }
 M.git = {
   n = {
-    ['<leader>gs'] = {
+    ['<leader>gf'] = {
       '<cmd> Git <cr>',
       'Git fugitive', { silent = true },
     },
@@ -319,9 +319,26 @@ M.git = {
       '<cmd> DiffviewOpen <cr>',
       'DiffviewOpen', { silent = true },
     },
+
     ['<leader>gB'] = {
       '<cmd> Gitsigns toggle_current_line_blame <cr>',
       'Git blame toggle', { silent = true },
+    },
+    ['<leader>gs'] = {
+      '<cmd> Gitsigns stage_hunk <cr>',
+      'stage hunk', { silent = true },
+    },
+    ['<leader>gu'] = {
+      '<cmd> Gitsigns undo_stage_hunk <cr>',
+      'undo stage hunk', { silent = true },
+    },
+    ['<leader>gp'] = {
+      '<cmd> Gitsigns preview_hunk <cr>',
+      'preview hunk', { silent = true },
+    },
+    ['<leader>gn'] = {
+      '<cmd> Gitsigns next_hunk <cr>',
+      'next hunk', { silent = true },
     },
   },
 }
