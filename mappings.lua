@@ -303,10 +303,13 @@ M.md_link = {
 }
 M.git = {
   n = {
+    -- fugitive
     ['<leader>gf'] = {
       '<cmd> Git <cr>',
       'Git fugitive', { silent = true },
     },
+
+    -- diffview
     ['<leader>gD'] = {
       '<cmd> DiffviewFileHistory <cr>',
       'Diffview current branch', { silent = true },
@@ -320,6 +323,7 @@ M.git = {
       'DiffviewOpen', { silent = true },
     },
 
+    -- gitsigns
     ['<leader>gB'] = {
       '<cmd> Gitsigns toggle_current_line_blame <cr>',
       'Git blame toggle', { silent = true },
