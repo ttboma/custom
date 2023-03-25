@@ -79,8 +79,9 @@ M.lspconfig = {
       end,
       "lsp formatting",
     },
-    ["<leader>lh"] = {
+    ["<leader>ll"] = {
       function()
+        vim.lsp.buf.hover()
         vim.lsp.buf.hover()
       end,
       "lsp hover",
@@ -304,9 +305,13 @@ M.md_link = {
 M.git = {
   n = {
     -- fugitive
-    ['<leader>gf'] = {
+    ['<leader>gg'] = {
       '<cmd> Git <cr>',
       'Git fugitive', { silent = true },
+    },
+    ['<leader>gp'] = {
+      '<cmd> Git push<cr>',
+      'Git push', { silent = true },
     },
 
     -- diffview
@@ -335,10 +340,6 @@ M.git = {
     ['<leader>gu'] = {
       '<cmd> Gitsigns undo_stage_hunk <cr>',
       'undo stage hunk', { silent = true },
-    },
-    ['<leader>gp'] = {
-      '<cmd> Gitsigns preview_hunk <cr>',
-      'preview hunk', { silent = true },
     },
     ['<leader>gn'] = {
       '<cmd> Gitsigns next_hunk <cr>',
